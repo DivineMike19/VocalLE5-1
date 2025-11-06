@@ -1,0 +1,211 @@
+/* 🌈 POSTS PAGE — Balanced Colors + Gradient Theme (No layout changes) */
+
+.posts-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #845EC2, #D65DB1, #FF6F91, #FF9671, #FFC75F, #F9F871);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  padding: 40px 20px;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  box-sizing: border-box;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.posts-header {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* ensures buttons don't overflow */
+}
+
+.header-text {
+  flex: 1;
+}
+
+.posts-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #ffffff; /* bright white for contrast */
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.posts-subtitle {
+  font-size: 16px;
+  color: #fdf0ff; /* soft pastel accent */
+  margin: 0;
+  font-weight: 400;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.add-post-button {
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(90deg, #845EC2, #D65DB1, #FF6F91);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.add-post-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.logout-button {
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #845EC2;
+  background: #ffffff;
+  border: 2px solid #845EC2;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.logout-button:hover {
+  background: #845EC2;
+  color: #ffffff;
+}
+
+.posts-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post-card {
+  background: #ffffff;
+  border: 2px solid #FF9671;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.post-card:hover {
+  border-color: #845EC2;
+  box-shadow: 0 4px 12px rgba(132, 94, 194, 0.25);
+}
+
+.post-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #845EC2;
+  letter-spacing: -0.3px;
+}
+
+.post-link {
+  color: #845EC2;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.post-link:hover {
+  color: #D65DB1;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.post-author {
+  font-weight: 500;
+  color: #FF6F91;
+}
+
+.post-separator {
+  color: #cccccc;
+}
+
+.post-date {
+  font-weight: 400;
+  color: #666666;
+}
+
+.empty-state {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #FFC75F;
+  border-radius: 12px;
+  padding: 60px 28px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.empty-message {
+  font-size: 18px;
+  font-weight: 600;
+  color: #845EC2;
+  margin: 0 0 8px 0;
+}
+
+.empty-subtitle {
+  font-size: 15px;
+  color: #666666;
+  margin: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .posts-container {
+    padding: 24px 16px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .add-post-button,
+  .logout-button {
+    flex: 1;
+  }
+
+  .posts-title {
+    font-size: 28px;
+  }
+
+  .posts-subtitle {
+    font-size: 15px;
+  }
+
+  .post-card {
+    padding: 20px;
+  }
+
+  .post-title {
+    font-size: 18px;
+  }
+}
